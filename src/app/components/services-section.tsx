@@ -1,36 +1,46 @@
-import { Brain, Heart, Users, MessageCircle, Target, Clock } from "lucide-react";
+import { Brain, Heart, Users, MessageCircle, Target, Palette, Shield, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
 
 const services = [
   {
     icon: Brain,
-    title: "Тривожність і стрес",
-    description: "Науково обґрунтовані методи для управління тривожними розладами та хронічним стресом."
+    title: "Тривога та панічні атаки",
+    description: "Робота зі страхами, тривогою та панічними станами. Повернення відчуття безпеки та спокою."
   },
   {
     icon: Heart,
-    title: "Відновлення від вигорання",
-    description: "Структурований підхід для запобігання та відновлення від професійного вигорання."
+    title: "Депресивні стани та апатія",
+    description: "Підтримка при втраті сенсу, апатії та депресивних переживаннях (не клінічна депресія)."
   },
   {
     icon: Users,
-    title: "Проблеми у стосунках",
-    description: "Терапевтична підтримка при міжособистісних викликах та патернах прив'язаності."
+    title: "Міжособистісні стосунки",
+    description: "Робота з труднощами у спілкуванні, побудова здорових стосунків з оточуючими."
   },
   {
-    icon: MessageCircle,
-    title: "Комунікативні навички",
-    description: "Розвиток ефективних стратегій спілкування для особистого та професійного життя."
+    icon: Shield,
+    title: "Самооцінка та впевненість",
+    description: "Повернення віри в себе, робота з невпевненістю та внутрішніми блоками."
   },
   {
     icon: Target,
-    title: "Постановка цілей",
-    description: "Визначення завдань та створення дієвих планів для значущих життєвих змін."
+    title: "Самовизначення та цілі",
+    description: "Пошук життєвих орієнтирів, мотивації та визначення власного шляху."
   },
   {
-    icon: Clock,
-    title: "Баланс роботи та життя",
-    description: "Створення здорових меж та сталих моделей способу життя."
+    icon: Sparkles,
+    title: "Втрата та горювання",
+    description: "Підтримка в процесі переживання втрати та внутрішньої трансформації."
+  },
+  {
+    icon: MessageCircle,
+    title: "Вигорання та хронічна втома",
+    description: "Відновлення внутрішніх ресурсів, робота з емоційним виснаженням."
+  },
+  {
+    icon: Palette,
+    title: "Арт-терапія",
+    description: "Творчий підхід до роботи з емоціями через малювання, колаж та інші техніки."
   }
 ];
 
@@ -46,14 +56,14 @@ export function ServicesSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl lg:text-4xl mb-4 font-semibold">
-            Ключові напрямки роботи
+            Напрямки роботи
           </h2>
           <p className="text-clinical-medium text-lg max-w-2xl mx-auto">
-            Спеціалізоване лікування для викликів сучасного життя
+            Простір для роботи з тим, що хвилює вас найбільше
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -65,7 +75,7 @@ export function ServicesSection() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
                 whileHover={{ y: -8, boxShadow: "0 12px 24px rgba(0,0,0,0.1)" }}
               >
                 {/* Subtle background gradient on hover */}
@@ -83,13 +93,27 @@ export function ServicesSection() {
                 <h3 className="mb-2 font-semibold relative z-10">
                   {service.title}
                 </h3>
-                <p className="text-clinical-medium leading-relaxed relative z-10">
+                <p className="text-clinical-medium leading-relaxed relative z-10 text-sm">
                   {service.description}
                 </p>
               </motion.div>
             );
           })}
         </div>
+
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <p className="text-clinical-medium text-lg max-w-3xl mx-auto leading-relaxed">
+            Також проводжу <span className="font-semibold text-clinical-dark">тренінги</span>,
+            <span className="font-semibold text-clinical-dark"> трансформаційні ігри</span> та
+            <span className="font-semibold text-clinical-dark"> групове консультування</span> для дорослих.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

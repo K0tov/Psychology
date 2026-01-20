@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
+import { Phone, Send, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -12,41 +12,31 @@ export function Footer() {
             </h3>
             <div className="space-y-3 text-gray-200">
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <a href="mailto:dr.mitchell@example.com" className="hover:text-white transition-colors">
-                  dr.mitchell@example.com
-                </a>
-              </div>
-              <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <a href="tel:+1234567890" className="hover:text-white transition-colors">
-                  (123) 456-7890
+                <a href="tel:+380975332475" className="hover:text-white transition-colors">
+                  +380 97 533 24 75
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <span>вул. Терапії 123, Офіс 200<br />Сан-Франциско, CA 94102</span>
+                <Send className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <a href="https://t.me/ninanedashkovskaya" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  @ninanedashkovskaya
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Office Hours */}
+          {/* Format */}
           <div>
             <h3 className="text-lg mb-4 font-semibold text-white">
-              Години роботи
+              Формат роботи
             </h3>
             <div className="space-y-2 text-gray-200">
-              <div className="flex justify-between">
-                <span>Понеділок - Четвер</span>
-                <span>9:00 - 18:00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>П'ятниця</span>
-                <span>9:00 - 15:00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Вихідні</span>
-                <span>За домовленістю</span>
+              <div>Індивідуальні консультації</div>
+              <div>Групова терапія</div>
+              <div>Онлайн та офлайн</div>
+              <div className="pt-2 text-sm text-gray-300">
+                Запис за домовленістю
               </div>
             </div>
           </div>
@@ -54,18 +44,22 @@ export function Footer() {
           {/* Social Links */}
           <div>
             <h3 className="text-lg mb-4 font-semibold text-white">
-              Зв'язок
+              Соціальні мережі
             </h3>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://t.me/ninanedashkovskaya"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded flex items-center justify-center hover:bg-white/20 transition-colors"
-                aria-label="LinkedIn"
+                aria-label="Telegram"
               >
-                <Linkedin className="w-5 h-5" />
+                <Send className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/ninakolomiec_psychology/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded flex items-center justify-center hover:bg-white/20 transition-colors"
                 aria-label="Instagram"
               >
@@ -73,13 +67,15 @@ export function Footer() {
               </a>
             </div>
             <p className="text-gray-200 text-sm mt-4">
-              Ліцензований клінічний психолог у Каліфорнії
+              Психолог-психотерапевт<br />
+              Арт-терапевт<br />
+              Сімейний медіатор
             </p>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-gray-300 text-sm">
-          <p>© 2026 Др. Сара Мітчелл, PsyD. Всі права захищені.</p>
+          <p>© 2026 Ніна Недашківська. Всі права захищені.</p>
           <p className="mt-2">
             Цей сайт призначений лише для інформаційних цілей і не є медичною консультацією.
           </p>

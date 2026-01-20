@@ -28,7 +28,7 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Науково-обґрунтована терапія для сучасного життя
+                Місце, де можна нарешті видихнути і бути собою
               </motion.h1>
 
               <motion.p
@@ -37,8 +37,8 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                Долайте життєві виклики з професійною психологічною підтримкою.
-                Спеціалізоване лікування тривожності, вигорання та складнощів у стосунках.
+                У світі, який постійно вимагає від нас бути швидшими, кращими та «правильнішими»,
+                ми часто втрачаємо контакт із найважливішою людиною — із самим собою.
               </motion.p>
 
               <motion.div
@@ -76,11 +76,11 @@ export function HeroSection() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             >
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-soft-grey 
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-soft-grey
                             shadow-2xl hover:shadow-3xl transition-shadow duration-500">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1733685318562-c726472bc1db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB0aGVyYXBpc3QlMjBwb3J0cmFpdHxlbnwxfHx8fDE3Njg0Mzg2MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Професійний психотерапевт"
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Ніна Недашківська - психолог-психотерапевт"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

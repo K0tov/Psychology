@@ -25,7 +25,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4">
           <div className="flex items-center justify-between">
             <div className="text-xl font-semibold">
-              Др. Сара Мітчелл
+              Ніна Недашківська
             </div>
 
             {/* Desktop Navigation */}
