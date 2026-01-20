@@ -78,7 +78,7 @@ export function HeroSection() {
               <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-soft-grey
                             shadow-2xl hover:shadow-3xl transition-shadow duration-500">
                 <img
-                  src="/Psychology/photo_2.jpg"
+                  src="/photo_2.jpg"
                   alt="Ніна Недашківська - психолог-психотерапевт"
                   className="w-full h-full object-cover"
                   loading="lazy"

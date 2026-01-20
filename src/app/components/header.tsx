@@ -25,7 +25,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="/Psychology/logo.svg" alt="Ніна Недашківська - Психолог-психотерапевт" className="h-12 w-auto" />
+              <img src="/logo.svg" alt="Ніна Недашківська - Психолог-психотерапевт" className="h-12 w-auto" />
               <span className="font-heading text-xl font-bold hidden sm:block">Ніна Недашківська</span>
             </div>
 

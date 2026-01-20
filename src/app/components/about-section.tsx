@@ -16,7 +16,7 @@ export function AboutSection() {
           >
             <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-soft-grey shadow-xl relative">
               <img
-                src="/Psychology/photo_1.jpg"
+                src="/photo_1.jpg"
                 alt="Ніна Недашківська"
                 className="w-full h-full object-cover"
                 loading="lazy"
