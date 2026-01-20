@@ -1,4 +1,3 @@
-import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { BookingModal } from "@/app/components/booking-modal";
@@ -23,7 +22,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <motion.h1
-                className="text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight leading-tight"
+                className="font-heading text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -78,8 +77,8 @@ export function HeroSection() {
             >
               <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-soft-grey
                             shadow-2xl hover:shadow-3xl transition-shadow duration-500">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                <img
+                  src="/Psychology/photo_2.jpg"
                   alt="Ніна Недашківська - психолог-психотерапевт"
                   className="w-full h-full object-cover"
                   loading="lazy"

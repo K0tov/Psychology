@@ -16,13 +16,49 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
         message: ""
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // В реальному додатку тут відправка даних на сервер
-        console.log("Booking data:", formData);
-        alert("Дякуємо за вашу заявку! Ми зв'яжемося з вами найближчим часом.");
-        onClose();
-        setFormData({ name: "", email: "", phone: "", preferredDate: "", message: "" });
+        setIsSubmitting(true);
+        setSubmitError(null);
+
+        try {
+            // Формуємо повідомлення для відправки
+            const message = `📋 Нова заявка на консультацію
+
+👤 Ім'я: ${formData.name}
+📧 Email: ${formData.email}
+📱 Телефон: ${formData.phone}
+📅 Бажана дата: ${formData.preferredDate}
+
+💬 Повідомлення:
+${formData.message || 'Не вказано'}`;
+
+            const response = await fetch('https://bohdanbot.richasez666.workers.dev/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: message
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('Помилка відправки заявки');
+            }
+
+            alert("Дякуємо за вашу заявку! Ми зв'яжемося з вами найближчим часом.");
+            onClose();
+            setFormData({ name: "", email: "", phone: "", preferredDate: "", message: "" });
+        } catch (error) {
+            console.error('Помилка відправки:', error);
+            setSubmitError('Не вдалося відправити заявку. Спробуйте ще раз або зв\'яжіться з нами іншим способом.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -124,21 +160,29 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                         />
                     </div>
 
+                    {submitError && (
+                        <div className="text-red-600 text-sm bg-red-50 p-3 rounded-lg">
+                            {submitError}
+                        </div>
+                    )}
+
                     <div className="flex gap-3 pt-4">
                         <button
                             type="button"
                             onClick={onClose}
+                            disabled={isSubmitting}
                             className="flex-1 px-6 py-3 bg-[#F5F5F7] text-[#1A1A1A] rounded-lg 
-                       hover:bg-gray-300 transition-colors font-medium"
+                       hover:bg-gray-300 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             Скасувати
                         </button>
                         <button
                             type="submit"
+                            disabled={isSubmitting}
                             className="flex-1 px-6 py-3 bg-[#2D2D2D] text-white rounded-lg 
-                       hover:bg-[#1A1A1A] transition-all font-medium"
+                       hover:bg-[#1A1A1A] transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            Відправити
+                            {isSubmitting ? 'Відправляємо...' : 'Відправити'}
                         </button>
                     </div>
                 </form>

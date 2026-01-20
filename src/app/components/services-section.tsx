@@ -46,7 +46,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="w-full bg-soft-grey py-16 lg:py-24">
+    <section className="w-full bg-soft-grey py-16 lg:py-24 border-t-2 border-clinical-light">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           className="text-center mb-12"
@@ -55,7 +55,7 @@ export function ServicesSection() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl lg:text-4xl mb-4 font-semibold">
+          <h2 className="font-heading text-3xl lg:text-4xl mb-4 font-bold">
             Напрямки роботи
           </h2>
           <p className="text-clinical-medium text-lg max-w-2xl mx-auto">
@@ -90,7 +90,7 @@ export function ServicesSection() {
                   <Icon className="w-6 h-6 text-clinical-dark" />
                 </motion.div>
 
-                <h3 className="mb-2 font-semibold relative z-10">
+                <h3 className="font-heading mb-2 font-semibold relative z-10">
                   {service.title}
                 </h3>
                 <p className="text-clinical-medium leading-relaxed relative z-10 text-sm">

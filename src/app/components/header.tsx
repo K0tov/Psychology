@@ -24,8 +24,9 @@ export function Header() {
       <header className="w-full bg-white border-b border-clinical-light sticky top-0 z-50 backdrop-blur-sm bg-white/95">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-xl font-semibold">
-              Ніна Недашківська
+            <div className="flex items-center gap-3">
+              <img src="/Psychology/logo.svg" alt="Ніна Недашківська - Психолог-психотерапевт" className="h-12 w-auto" />
+              <span className="font-heading text-xl font-bold hidden sm:block">Ніна Недашківська</span>
             </div>
 
             {/* Desktop Navigation */}

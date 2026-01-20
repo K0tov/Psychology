@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-8">
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg mb-4 font-semibold text-white">
+            <h3 className="font-heading text-lg mb-4 font-bold text-white">
               Контакти
             </h3>
             <div className="space-y-3 text-gray-200">
@@ -28,7 +28,7 @@ export function Footer() {
 
           {/* Format */}
           <div>
-            <h3 className="text-lg mb-4 font-semibold text-white">
+            <h3 className="font-heading text-lg mb-4 font-bold text-white">
               Формат роботи
             </h3>
             <div className="space-y-2 text-gray-200">
@@ -43,7 +43,7 @@ export function Footer() {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-lg mb-4 font-semibold text-white">
+            <h3 className="font-heading text-lg mb-4 font-bold text-white">
               Соціальні мережі
             </h3>
             <div className="flex gap-4">

@@ -24,7 +24,7 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="w-full bg-white py-16 lg:py-24 border-t border-clinical-light">
+    <section className="w-full bg-white py-16 lg:py-24 border-t-2 border-clinical-light">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           className="text-center mb-12"
@@ -33,7 +33,7 @@ export function ProcessSection() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl lg:text-4xl mb-4 font-semibold">
+          <h2 className="font-heading text-3xl lg:text-4xl mb-4 font-bold">
             Як це працює
           </h2>
           <p className="text-clinical-medium text-lg max-w-2xl mx-auto">
@@ -72,7 +72,7 @@ export function ProcessSection() {
                   </div>
                 </motion.div>
 
-                <h3 className="text-xl mb-3 font-semibold">
+                <h3 className="font-heading text-xl mb-3 font-semibold">
                   {step.title}
                 </h3>
                 <p className="text-clinical-medium leading-relaxed">
